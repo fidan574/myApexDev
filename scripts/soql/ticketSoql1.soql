@@ -1,0 +1,2 @@
+select  id, name, status_c, subject_j, priority_c from salesforce_ticket__c where status__c !='' and priority__c = 'High'
+select id, name from account order by name

@@ -1,0 +1,5 @@
+select id, name, Project_Name__c, Status__c from Salesforce_Project__c
+
+select id, name, MailingCity from Contact WHERE MailingCity = 'Paris'
+
+select id, name, MailingCity, MailingCountry from Contact WHERE Name LIKE '%A%'
