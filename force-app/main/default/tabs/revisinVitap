@@ -1,0 +1,19 @@
+trigger OpportunityTrigger on Opportunity (before insert) {
+    if(trigger.isAfter && trigger.isInsert){
+       set<id> oppIds = trigger.newMap.keySet();
+       List<OpportunityLineItem> ListOLI = new list<OpportunityLineItem>();
+       product2 p2 = [select id, ProductCode from product2 where ProductCode = 'SFDX' Limit 1];
+        
+        
+       for(opportunity opp: trigger.new){
+            OpportunityLineItem oli = new OpportunityLineItem();
+            oli.OpportunityId = opp.id;
+            oli.Product2Id = p2.id;
+           oli.Quantity = 1;
+           listOLI.add(oli);
+        }
+        if(!listOLI.isEmpty()){
+            system.debug('listOLI => ' + listOLI);
+        }
+    }
+}
