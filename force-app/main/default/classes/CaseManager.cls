@@ -57,7 +57,9 @@ Global with sharing class CaseManager {
         System.debug(caseInfo);
         Case cs = new Case();
         for(String key: caseInfo.keySet()){
-            cs.put(key, caseInfo.get(key));
+            if(key != 'attributes'){  //attribute is not our key but it comes automatically. So it gives error on test that is the reson of this code
+                cs.put(key, caseInfo.get(key));
+            }
         }
         update cs;
         return cs;

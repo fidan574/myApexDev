@@ -17,7 +17,7 @@ public with sharing class CovidInfoRestCallout {
             System.debug(jsonString);
             //Convert the Json string into our product object
             List<CovidInfoWrapper> covidInfoWrapper = (List<CovidInfoWrapper>)JSON.deserialize(jsonString, List<CovidInfoWrapper>.class);
-          List<Covid_Info__c> covIn = [SELECT id, Received_Date__c FROM Covid_Info__c WHERE Received_Date__c = today];
+        List<Covid_Info__c> covIn = [SELECT id, Received_Date__c FROM Covid_Info__c WHERE Received_Date__c = today];
             Covid_Info__c ci = new Covid_Info__c();
             ci.Name = String.valueOf(covidInfoWrapper[0].states);
             ci.Positive__c = covidInfoWrapper[0].positive;

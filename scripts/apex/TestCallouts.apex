@@ -37,3 +37,5 @@ HttpResponse resp88 = CovidInfoRestCallout.getCovidInfo();
 System.debug(resp88);
 
 HttpResponse post = PostGorestCallout.postToPost();
+
+System.debug(UserInfo.getSessionId().subString(1));

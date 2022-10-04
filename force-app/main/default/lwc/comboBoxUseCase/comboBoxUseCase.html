@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="COMBO BOX USECASE">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+                label="ComboBox"
+                options={options}
+                value="Select Option"
+                onchange={handleChange}>
+            </lightning-combobox>
+            The selected value is : {value}
+        </div>
+    </lightning-card>
+</template>

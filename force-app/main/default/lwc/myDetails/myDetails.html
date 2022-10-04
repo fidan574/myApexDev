@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="MY NAME AND ROLE">
+        <div class="slds-var-m-around_medium">
+            <lightning-avatar src="https://thumbs.dreamstime.com/z/businessman-icon-image-male-avatar-profile-vector-glasses-beard-hairstyle-179728610.jpg"></lightning-avatar>
+            <lightning-input 
+                type="text"
+                label="Enter User Name"
+                value={userName}
+                placeholder="Your username"
+                onchange={nameHandleChange}>
+            </lightning-input>
+            
+            <lightning-input 
+                type="text"
+                label="Enter your country"
+                value={country}
+                placeholder="Your country"
+                onchange={coHandleChange}
+            ></lightning-input>
+            <lightning-combobox
+                label="Enter your role"
+                options={RoleOptions}
+                value={role}
+                placeholder="Your role"
+                onchange={handleChange}>
+            </lightning-combobox>
+            Hello my name is {userName}, my country is {country}, my role is {role}
+        </div>
+    </lightning-card>
+</template>
+
+

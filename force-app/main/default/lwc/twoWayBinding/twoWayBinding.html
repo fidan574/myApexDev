@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="TWO WAY DATA BINDING">
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+                type="text"
+                label="Enter Name"
+                value={name}
+                onchange={handleChange}>
+            </lightning-input>
+            The entered name is {name}.
+        </div>
+    </lightning-card> 
+</template>

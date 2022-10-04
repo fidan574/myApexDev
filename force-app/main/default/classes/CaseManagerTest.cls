@@ -91,4 +91,29 @@ public with sharing class CaseManagerTest {
         System.assertEquals(cs.Id, caseId);
         Test.stopTest();
     }
+
+    @IsTest
+    static void updateCaseTest(){
+    
+        Test.startTest();
+        //prepare json string and convert if into blob
+        Case cs = [SELECT Id, Subject, Description, Reason FROM Case LIMIT 1];
+        cs.Reason = 'Installation';
+        String jsonString = JSON.serialize(cs);
+        
+        //prepare RestRequest and Context
+        RestRequest request = new RestRequest();
+        request.requestBody = Blob.valueOf(jsonString);
+        request.httpMethod = 'PATCH';
+        RestContext.request = request;
+
+
+        //Test the method ad perform asserts
+        Case updatedCase = CaseManager.updateCase();
+        System.assertEquals('Installation', updatedCase.Reason);
+        Test.stopTest();
+        
+    }
+
+
 }

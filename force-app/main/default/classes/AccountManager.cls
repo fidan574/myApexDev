@@ -15,18 +15,17 @@ Global with sharing class AccountManager {
     }
 
     @HttpPost
-    Global Static Id createdCase(String accountname, String industry, decimal annualrevenue, String customerpriority, String description){
+    Global Static Id createAccount(String accountname, String industry, String customerpriority, String description){
         Account acc = new Account();
         acc.Name = accountname;
         acc.Industry = industry;
-        acc.AnnualRevenue = annualrevenue;
         acc.CustomerPriority__c = customerpriority;
         acc.Description = description;
         insert acc;
         return acc.Id;
     }
 
-    /* https://bluemarbletravel-dev-ed.lightning.force.com/services/apexrest/Case/{caseId}*/
+    /* https://bluemarbletravel-dev-ed.lightning.force.com/services/apexrest/Account/{accountId}*/
     @HttpDelete
     Global Static String deleteAccount(){
         RestRequest request = RestContext.request;
@@ -39,12 +38,11 @@ Global with sharing class AccountManager {
 
     }
     @HttpPut
-    Global Static Id upsertAccount(String id, String accountname, String industry, decimal annualrevenue, String description){
+    Global Static Id upsertAccount(String id, String accountname, String industry, String description){
         Account acc = new Account();
         acc.Id = id;
         acc.Name = accountname;
         acc.Industry = industry;
-        acc.AnnualRevenue = annualrevenue;
         acc.Description = description;
         upsert acc;
         return acc.Id;
@@ -58,7 +56,9 @@ Global with sharing class AccountManager {
         System.debug(accountInfo);
         Account acc = new Account();
         for(String key: accountInfo.keySet()){
-            acc.put(key, accountInfo.get(key)); 
+            if(key != 'attributes'){ //attribute is not our key but it comes automatically. So it gives error on test that is the reson of this code
+                acc.put(key, accountInfo.get(key)); 
+            }
         }
         update acc;
         return acc;

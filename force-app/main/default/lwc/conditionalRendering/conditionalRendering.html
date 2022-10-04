@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="GETTERS COMPONENT">
+        <div class="slds-var-m-around_medium">
+            <template if:true={showContent}>
+                {dataIfTrue}
+            </template>
+            <template if:false={showContent}>
+                {dataIfFalse}
+            </template>
+        </div>
+    </lightning-card>
+</template>
