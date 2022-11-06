@@ -1,0 +1,32 @@
+.anaCerceve{
+    margin : 0px; 
+    padding : 0px; 
+    box-sizing : border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+    display :flex; 
+    border-radius: 10px;
+    justify-content : center; 
+    align-items : center; 
+        min-height : 200.00px; 
+        background : rgb(71, 176, 30) none repeat scroll 0% 0% / auto padding-box border-box; 
+    }
+    
+.icCerceve {
+        display: legacy;
+        margin-bottom: 1rem;
+        width: 100%;
+        border-radius: 10px;
+        justify-content : left; 
+        align-items : stretch; 
+        background: rgb(166, 135, 162);
+        font-size: 1rem;
+        color: rgb(21, 17, 17);
+        min-width: 23rem;
+    }
+    
+.icCerceve:hover{
+        cursor: pointer; 
+        box-shadow: 0 1.65rem 1.65rem 0 rgba(14, 22, 145, 0.5); 
+        transform: scale(1.10); 
+        transition: transform 100ms;
+    }

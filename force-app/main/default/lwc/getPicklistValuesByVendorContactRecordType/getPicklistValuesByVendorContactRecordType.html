@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="GET PICKLIST VALUES BY RT VENDOR CONTACT" icon-name="standard:contact">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+                name="cpo"
+                label="Select Customer Priority..."
+                options={customerPriorityOptions}
+                value={selectedCustomerPriority}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            
+            <lightning-combobox
+                name="so"
+                label="Select Status..."
+                options={statusOptions}
+                value={selectedStatus}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            
+            <lightning-combobox
+                name="lso"
+                label="Select Lead Source..."
+                options={leadSourceOptions}
+                value={selectedLeadSource}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            Customer Priority is: <strong>{selectedCustomerPriority}</strong>, Status is: <strong>{selectedStatus}</strong> and Lead Source is: <strong>{selectedLeadSource}</strong>. 
+    
+        </div>
+    </lightning-card> 
+</template>

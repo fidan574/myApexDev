@@ -1,0 +1,52 @@
+<template>
+    <lightning-card title="LEAD FORM UPDATE WITH FUNCTION" icon-name="utility:edit_form">
+        <div class="slds-var-m-around_medium">
+            <form class="lead">
+                <!-- <lightning-input 
+                    label="Blog#" 
+                    name="Name" 
+                    value={name}
+                    readonly
+                    onchange={changeHandler}>
+                </lightning-input> -->
+                <lightning-input 
+                    label="First Name" 
+                    name="FirstName" 
+                    value={firstName}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input 
+                    label="Last Name" 
+                    name="LastName" 
+                    value={lastName}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input 
+                    label="Company" 
+                    name="Company" 
+                    value={company}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input 
+                    label="Title" 
+                    name="Title" 
+                    value={title}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input 
+                    label="Email" 
+                    name="Email" 
+                    value={email}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <div class="slds-var-m-top_small slds-align_absolute-center">
+                    <lightning-button
+                        label="Update Lead"
+                        variant="brand"
+                        onclick={updateLead}>
+                    </lightning-button>
+                </div>
+            </form>
+        </div>
+    </lightning-card>
+</template>

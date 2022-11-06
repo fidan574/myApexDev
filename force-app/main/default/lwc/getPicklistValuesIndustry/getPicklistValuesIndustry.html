@@ -1,0 +1,20 @@
+<template>
+    <div class="anaCerceve">
+        <lightning-card title="GET PICKLIST VALUES : INDUSTRY" icon-name="standard:case">
+            <div class="slds-var-m-around_medium">
+                <div class="icCerceve">
+                    <lightning-combobox
+                    label="Selected Industry..."
+                    options={industryOptions}
+                    value={selectedIndustry}
+                    onchange={changeHandler}>
+                    
+                </lightning-combobox>
+                </div>
+                <div class="icCerceve">
+                    Selected Industry is: <strong>{selectedIndustry}</strong>
+                </div>
+            </div>
+        </lightning-card> 
+    </div>
+</template>

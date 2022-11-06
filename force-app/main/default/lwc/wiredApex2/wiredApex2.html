@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="WIRED APEX WITH PARAMS" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <strong>Total {industryType} Accounts:{total}</strong>
+            <lightning-datatable
+                key-field="Id"
+                data={accounts}
+                columns={columns}>
+            </lightning-datatable>
+        </div> 
+    </lightning-card>
+</template>

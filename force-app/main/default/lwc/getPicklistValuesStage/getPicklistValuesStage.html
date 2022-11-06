@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="GET PICKLIST VALUES : STAGE NAME" icon-name="standard:case">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+                label="Selected Stages..."
+                options={stageOptions}
+                value={selectedStages}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            <div class="slds-var-m-around_small">
+                Selected Stage Name is: <strong>{selectedStages}</strong>
+            </div>
+        </div>
+    </lightning-card> 
+</template>

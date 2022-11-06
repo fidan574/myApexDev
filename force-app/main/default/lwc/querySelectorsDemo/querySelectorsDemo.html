@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="QUERY SELECTORS">
+        <div class="slds-var-m-around_medium">
+            <h1>This is a header text!</h1>
+            <p>I am a paragraph text!</p>
+            <template for:each={cities} for:item="city">
+                <div key={city} class="city">{city}</div>
+            </template>
+
+            <lightning-button
+            class="slds-align_absolute-center"
+            label="Click Me"
+            variant="brand"
+            onclick={clickHandler}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

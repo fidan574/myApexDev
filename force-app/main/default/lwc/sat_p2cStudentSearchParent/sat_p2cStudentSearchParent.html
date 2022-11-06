@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="P2C NON PRIMITIVES STUDENT SEARCH">
+        <div class="slds-var-m-around_medium">
+            <lightning-input
+                type="search"
+                label="Student Search..."
+                value={searchCode}
+                onchange={changeHandler}>
+            </lightning-input>
+            <div class="slds-var-m-top_small">
+                <c-display-results
+                    result={students}
+                    columns={columns}
+                    error={error}>
+                </c-display-results>
+            </div>
+        </div>
+    </lightning-card>
+</template>

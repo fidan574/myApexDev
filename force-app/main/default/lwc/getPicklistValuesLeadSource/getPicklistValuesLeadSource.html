@@ -1,0 +1,19 @@
+<template>
+    <div class="anaCerceve">
+        <lightning-card title="GET PICKLIST VALUES : LEAD SOURCE" icon-name="standard:case">
+            <div class="slds-var-m-around_medium">
+                <div class="icCerceve">
+                    <lightning-combobox
+                    label="Select Lead Source..."
+                    options={leadSourceOptions}
+                    value={selectedLeadSource}
+                    onchange={changeHandler}>
+                </lightning-combobox>
+                </div>
+                <div class="icCerceve">
+                    Selected Stage Name is: <strong>{selectedLeadSource}</strong>
+                </div>
+            </div>
+        </lightning-card> 
+    </div>
+</template>

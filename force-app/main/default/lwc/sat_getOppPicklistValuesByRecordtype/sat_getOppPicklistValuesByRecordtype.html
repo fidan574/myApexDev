@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="GET PICKLIST VALUES BY RECORD TYPE : OPP" icon-name="standard:opportunity">
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+                label="Enter Opportunity Name..." 
+                name="Opportunity Name" 
+                value={opportunityName}
+                onchange={changeHandler}>
+            </lightning-input>
+            <lightning-combobox
+                label="Select Stage Name..."
+                options={stageNameOptions}
+                value={selectedStageName}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            <lightning-combobox
+                label="Select Type..."
+                options={typeOptions}
+                value={selectedType}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            <div class="slds-var-m-around_small">
+                Thanks for choosing the correct information. You have entered <br/> 
+                <strong>Opportunity Name :</strong> {opportunityName} <br/> 
+                <strong>Stage Name :</strong> {selectedStageName} <br/> 
+                <strong>Opportunity Type :</strong> {selectedType}
+            </div>
+        </div>
+    </lightning-card> 
+</template>

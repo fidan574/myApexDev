@@ -1,0 +1,51 @@
+<template>
+    <div class="anaCerceve">
+        <lightning-card title="BLOG FORM" icon-name="utility:edit_form">
+        
+            <form class="blog">
+                <div class="icCerceve">
+                    <lightning-input
+                        label="Author Name" 
+                        name="Author__c" 
+                        onchange={changeHandler}>
+                    </lightning-input>
+                </div>
+                <div class="icCerceve">
+                    <lightning-input 
+                        label="Topic Name"
+                        name="Topic__c" 
+                        onchange={changeHandler}>
+                    </lightning-input>
+                </div>
+                <div class="icCerceve">
+                    <lightning-input 
+                        name="Title__c" 
+                        label="Blog Title"
+                        onchange={changeHandler}>
+                    </lightning-input>
+                </div>
+                <div class="icCerceve">
+                    <lightning-textarea
+                        name="Body__c" 
+                        label="Blog Content"
+                        onchange={changeHandler}>
+                    </lightning-textarea> 
+                </div>
+                <div class="slds-align_absolute-center">
+                    <lightning-button
+                        label="Cancel"
+                        variant="natural"
+                        class="slds-var-m-right_x-small"
+                        onclick={resetBlog}>
+                    </lightning-button>
+                    <lightning-button
+                        label="Save Blog"
+                        variant="brand"
+                        onclick={saveBlog}>
+                    </lightning-button>
+                </div>
+        
+            </form>
+        </lightning-card>
+    </div>
+</template>

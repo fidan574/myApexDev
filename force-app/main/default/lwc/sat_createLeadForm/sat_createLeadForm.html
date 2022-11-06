@@ -1,0 +1,51 @@
+<template>
+    <lightning-card title="LEAD FORM  CREATE WITH FUNCTION" icon-name="utility:edit_form">
+        <div class="slds-var-m-around_medium">
+            <form class="lead">
+                <lightning-input 
+                    label="First Name" 
+                    name="FirstName" 
+                    value={firstName}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input 
+                    label="Last Name" 
+                    name="LastName" 
+                    value={lastName}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input 
+                    label="Phone" 
+                    name="Phone" 
+                    value={phone}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input 
+                    label="Email" 
+                    name="Email" 
+                    value={email}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input 
+                    label="Company" 
+                    name="Company" 
+                    value={company}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <div class="slds-var-m-top_small slds-align_absolute-center">
+                    <lightning-button
+                        label="Cancel"
+                        variant="natural"
+                        class="slds-var-m-right_x-small"
+                        onclick={resetLead}>
+                    </lightning-button>
+                    <lightning-button
+                        label="Save Lead"
+                        variant="brand"
+                        onclick={saveLead}>
+                    </lightning-button>
+                </div>
+            </form>
+        </div>
+    </lightning-card>
+</template>

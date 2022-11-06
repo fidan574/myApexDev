@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="WIRED APEX : OPP" icon-name="standard:opportunity">
+        <div class="slds-var-m-around_medium slds-align_absolute-center">
+            <strong>Top Opportunities</strong>
+        </div>
+        <lightning-datatable
+                        key-field="Id"
+                        data={opps}
+                        columns={columns}>
+        </lightning-datatable>
+        <!-- <aura:component implements="flexipage:availableForAllPageTypes">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <span>1</span>
+                </div>
+                <div class="slds-col">
+                    <span>2</span>
+                </div>
+                <div class="slds-col">
+                    <span>3</span>
+                </div>
+                <div class="slds-col">
+                    <span>4</span>
+                </div>
+            </div>
+        </aura:component> -->
+        
+    </lightning-card>
+</template>

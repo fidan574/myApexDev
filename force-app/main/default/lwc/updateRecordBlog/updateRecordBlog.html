@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="BLOG WITH UPDATE RECORD" icon-name="utility:edit_form">
+        <div class="slds-var-m-around_medium">
+            <form class="blog">
+                <lightning-input 
+                    label="Blog#" 
+                    name="Name" 
+                    value={name}
+                    readonly
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input 
+                    label="Author" 
+                    name="Author__c" 
+                    value={author}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input 
+                    label="Blog Title" 
+                    name="Title__c" 
+                    value={title}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input 
+                    label="Topic" 
+                    name="Topic__c" 
+                    value={topic}
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-textarea 
+                    label="Blog Content" 
+                    name="Body__c" 
+                    value={body}
+                    onchange={changeHandler}>
+                </lightning-textarea>
+​
+                <div class="slds-var-m-top_small slds-align_absolute-center">
+                    <lightning-button
+                        label="Update Blog"
+                        variant="brand"
+                        onclick={updateBlog}>
+                    </lightning-button>
+                </div>
+            </form>
+        </div>
+    </lightning-card>
+</template>

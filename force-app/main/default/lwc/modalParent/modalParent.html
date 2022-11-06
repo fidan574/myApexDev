@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="C2P SIMPLE EVENT">
+        <div class="slds-var-m-around_medium">
+            <div>This is the parent component. It will have a button to show modal child componet!</div>
+            
+            <lightning-button
+                label="Show Modal"
+                variant="brand"
+                onclick={clickHandler}>
+            </lightning-button>
+            <template if:true={message}>
+                <div>
+                    <!-- <div>{message}</div>-->
+                    {message.firstname} <br/>
+                    {message.lastname} <br/>
+                    {message.company}
+                </div>
+            </template>
+            <template if:true={showModal}>
+                <c-modal-child onclose={modalHandler}></c-modal-child>
+            </template>
+        </div>
+    </lightning-card>
+</template>

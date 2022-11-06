@@ -1,0 +1,35 @@
+.approach1 {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 10px;
+    background: rgb(22, 34, 139);
+    font-size: 1rem;
+    color: rgb(246, 247, 242);
+    min-width: 10rem;
+}
+
+.approach1:hover{
+    cursor: pointer; 
+    box-shadow: 0 1rem 1.4rem 0 rgba(248, 252, 252, 0.5); 
+    transform: scale(1.11); 
+    transition: transform 100ms;
+}
+
+.approach2 {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 10px;
+    background: rgb(107, 3, 3);
+    font-size: 1rem;
+    color: rgb(246, 247, 242);
+    min-width: 10rem;
+}
+
+.approach2:hover{
+    cursor: pointer; 
+    box-shadow: 0 1rem 1.4rem 0 rgba(248, 252, 252, 0.5); 
+    transform: scale(1.11); 
+    transition: transform 100ms;
+}

@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="P2C PRIMITIVES FAVFRUIT ASSIGNMENT">
+        <div class="slds-var-m-around_medium">
+            <div>HELLO from parent comp!</div>
+            <div class= "favFruit" style="color: #0c5ee2fa; backgroundColor: hsl(298, 93%, 62%); border: 10px double rgb(5, 194, 21)">
+                <c-p2c-primatives-child-assignment
+                fav-fruit="Grapes"
+                city-available="Trollinger, Lemberger, Müller-Thurgau, Kerner, Pinot and so on..."
+                times-ate="once in two days">
+            </c-p2c-primatives-child-assignment>
+            <lightning-button
+            class="slds-align_absolute-center"
+            label="FavFruit"
+            variant="brand"
+            onclick={clickHandler}>
+            </lightning-button>
+            </div>   
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,60 @@
+<template>
+    <lightning-card title="Hesap Makinesi - LWC" icon-name="custom:custom99">
+        <div class="slds-var-p-around_small">
+            
+            <lightning-input 
+                label="Birinci sayi" 
+                type="number" 
+                name="Number1" 
+                value={num1}
+                onchange={elinleDegerGirdiginde} 
+                required></lightning-input><br>
+​
+            <lightning-input 
+                label="Ikinci sayi" 
+                type="number" 
+                name="Number2" 
+                value={num2}
+                onchange={elinleDegerGirdiginde} 
+                required></lightning-input><br>
+​
+            <lightning-layout horizontal-align="space">
+                
+                <lightning-layout-item 
+                padding="around-small">
+                    <lightning-button 
+                    label="Toplama" 
+                    variant="Brand" 
+                    onclick={butonaTiklattigida}></lightning-button>
+                </lightning-layout-item>
+​
+                <lightning-layout-item 
+                padding="around-small">
+                    <lightning-button 
+                    label="Cikarma" 
+                    variant="Brand" 
+                    onclick={butonaTiklattigida}></lightning-button>
+                </lightning-layout-item>
+                
+                <lightning-layout-item 
+                padding="around-small">
+                    <lightning-button 
+                    label="Carpma" 
+                    variant="Brand" 
+                    onclick={butonaTiklattigida}></lightning-button>
+                </lightning-layout-item>
+                
+                <lightning-layout-item 
+                padding="around-small">
+                    <lightning-button 
+                    label="Bolme" 
+                    variant="Brand" 
+                    onclick={butonaTiklattigida}></lightning-button>
+                </lightning-layout-item>
+            
+            </lightning-layout>
+            </br>
+            Sonuc = <strong>{result}</strong>
+        </div>
+    </lightning-card>
+</template>

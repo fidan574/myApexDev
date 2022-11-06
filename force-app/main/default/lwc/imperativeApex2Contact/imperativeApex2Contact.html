@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="IMPERATIVE APEX CONTACT" icon-name="standard:contact">
+        <div class="slds-var-m-around_medium">
+            <lightning-input
+                label="Enter some keywords in order to see matching contacts..."
+                type="search"
+                onkeyup={searchHandler}>
+            </lightning-input>
+            <div class="slds-var-m-top_small slds-grid slds-gutters">
+                <!--Display results-->
+                <template if:true={contacts}>
+                    <template for:each={contacts} for:item="con">
+                        <div key = {con.Id} class="slds-var-m-bottom_small slds-box slds-col">
+                            <strong>{con.Name}</strong> <br/>
+                            {con.Title} <br/>
+                            {con.Email} <br/>
+                            {con.Phone} <br/>
+                        </div>
+                    </template>
+                </template>
+                <!--Display errors-->
+                <template if:true={error}>
+                    {error}
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

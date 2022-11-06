@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="ACCOUNT FORM" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            Account Objesi üzerinde hangi işlemi yapmak istiyorsaniz o butona tiklayiniz...
+        </div>
+        <div class="slds-var-m-around_medium slds-align_absolute-center">
+            <lightning-button-group>
+                <lightning-button label="Create" variant="success" class="slds-var-m-right_x-small" onclick={createHandler}></lightning-button>
+                <lightning-button label="Delete" variant="destructive" onclick={deleteHandler}></lightning-button>
+            </lightning-button-group>
+        </div>
+    </lightning-card>
+    <lightning-card title="CREATE ACCOUNT" icon-name="standard: record_create" if:true={createForm}>
+        <div class="slds-var-m-around_medium">
+            <lightning-input label="Account Name" name="Name" onchange={changeHandler}></lightning-input>
+            <lightning-combobox
+                label="Select Industry..."
+                name="Industry"
+                options={industryOptions}
+                value={selectIndustry}
+                onchange={changeHandler}>
+            </lightning-combobox>
+        </div>
+        <div class="slds-var-m-top_small slds-align_absolute-center">
+            <lightning-button
+                variant="brand"
+                label="Save"
+                onclick={saveAccount}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="DELETE ACCOUNT" icon-name="action:delete" if:true={deleteForm}>
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+            label="Enter the record id you want to delete"
+            value={recordId}
+            onchange={changeHandlerDel}>
+        </lightning-input>
+        <div class="slds-var-m-top_small slds-align_absolute-center">
+            <lightning-button
+                label="Delete Record"
+                variant="destructive"
+                onclick={deleteRec}>
+            </lightning-button>
+        </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="ACCOUNTS IMPERATIVE APEX" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+            label="Industry"
+            value="selectedIndustry"
+            options={industryOptions}
+            placeholder="Select Industry"
+            onchange={searchHandler}>
+        </lightning-combobox>
+            <div class="slds-var-m-top_small">
+                <template if:true={accounts}>
+                    <template for:each={accounts} for:item="acc">
+                        <div key = {acc.Id} class="slds-var-m-bottom_small slds-box">
+                            <strong>{acc.Name}</strong> <br/>
+                            {acc.Type} <br/>
+                            {acc.Industry} <br/>
+                            {acc.AnnualRevenue} <br/>
+                        </div>
+                    </template>
+                </template>
+                <template if:true={error}>
+                    {error}
+                </template>
+            </div>
+        </div> 
+    </lightning-card>
+</template>
